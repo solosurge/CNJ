@@ -1,0 +1,10 @@
+@mixin displayed ($width: 100%) {
+    padding: 2% 0 1% 2%;
+    max-width: $width;
+}
+
+@mixin border-radius ($radius: 20px) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}

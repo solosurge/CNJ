@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<title>CNJ | Bible Study</title>
+<meta charset="utf-8">
+<meta name="description" content="Learn word of God with Eugene Mikhaylichenko">
+<meta name="author" content="Sergey">
+
+<!-- Jquery & Java Script
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/myScript.js"></script>
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href='https://fonts.googleapis.com/css?family=Oleo+Script:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<!-- Bible Highlighter
+-------------------------------------------------- -->
+<script id="bw-highlighter-config">
+(function(w, d, s, e, id) {
+window._bhparse = window._bhparse || [];
+  function l() {
+    if (d.getElementById(id)) return;
+    var n = d.createElement(s), x = d.getElementsByTagName(s)[0];
+    n.id = id; n.async = true; n.src = '//bibles.org/linker/js/client.js';
+    x.parentNode.insertBefore(n, x);
+  }
+  (w.attachEvent) ? w.attachEvent('on' + e, l) : w.addEventListener(e, l, false);
+})(window, document, 'script', 'load', 'bw-highlighter-src');
+
+    
+// *___________Google Map________________________
+
+// When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+        function init() {
+// Basic options for a simple Google Map
+// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+// How zoomed in you want the map to start at (always required)
+        zoom: 13,
+// The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(42.148035, -72.5954438), // Chicopee
+// How you would like to style the map.
+// This is where you would paste any style found on Snazzy Maps.
+        styles: [{"stylers":[{"hue":"#ff1a00"},{"invert_lightness":true},{"saturation":-100},{"lightness":33},{"gamma":0.5}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2D333C"}]}]
+    };
+// Get the HTML DOM element that will contain your map
+// We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+// Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+// Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(42.148035, -72.5954438),
+            map: map, title: '625 Front St, Chicopee, Massachusetts 01013'
+    });
+}
+</script>
+
+</head>
+
+<!-- Navigation Bar
+-------------------------------------------------- -->
+<body>
+<header class="main_nav">
+    <div class="container">
+        <div class="two columns">
+            <a href="index.html"><img src="images/logo.png" alt="CNJ" class="logo"></a>
+        </div>
+        <div class="ten columns">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="audio.html">audio</a></li>
+                <li><a href="video.html">video</a></li>
+                <li><a href="contact-form.php">contact</a></li>
+            </ul>
+        <select onChange="window.location.replace(this.options[this.selectedIndex].value)">
+            <option value="index.html">Home</option>
+            <option value="about.html" selected>About</option>
+            <option value="audio.html">Audio</option>
+            <option value="video.html">Video</option>
+            <option value="contact-form.php">Contact</option>
+        </select>
+        </div>
+    </div>
+</header>
+
+<!-- Main Contant
+-------------------------------------------------- -->
+   <!-- <div id="myDiv"></div> -->
+    <div class="container ustream">
+        <div class="twelve columns">
+            <p class="column">CNJ Bible Study was created with the goal of deepening believers understanding of the scripture. In depth knowledge of the scripture is a fundamental and essential part of the spiritual maturity and growth of a Christian. The Bible tells all believers to "go on and get past the elementary stage in the teachings and doctrine of Christ, advancing steadily toward the completeness and perfection that belong to spiritual maturity." Hebrews 6:1 As we advance in our knowledge of Christ "we may no longer be little children, being blown and carried about by every wind of doctrine...but speaking the truth in love, we may grow up into Him in all things." Ephesians 4:14-15 It is our desire to be faithful stewards of the manifold grace of God presenting "every man fullgrown in Christ Jesus." Colossians 1:28</p>
+        <div class="twelve columns">
+            <div id="map"></div>
+        </div>
+    <img class="twelve columns displayed" src="images/Eugene.png" alt="Yevgeniy Mikhaylichenko"/>
+        <p class="four columns address">CNJ Bible Study<br>625 Front St, Chicopee, MA 01013<br>(413)534-8103<br>CNJStudy@gmail.com</p>
+            <p class="four columns mission">The mission of CNJ Bible Study is to fulfill the Great Commission of our Lord Jesus Christ in proclaiming His Gospel to all creation and making disciples of all the nations.</p>
+        </div>
+    </div>
+        
+<!-- Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <footer class="copyright">
+        <div class="twelve column">
+            <p>&copy;2015 CNJ - All rights reserved.</p>
+        </div>
+</footer>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
