@@ -90,8 +90,8 @@ window._bhparse = window._bhparse || [];
     
 <!-- Main Contant
 -------------------------------------------------- -->
-    <div class="container ustream">
-        <div class="twelve columns">
+<div class="container ustream">
+    <div class="twelve columns">
             
 <form method="post" action="contact.php">
 
@@ -111,30 +111,26 @@ window._bhparse = window._bhparse || [];
         <input type="submit" value="Submit" />
     </div>
 </form>
-
-        </div>
     </div>
-    <div class="container main">
+    <hr class="line">
+<!-- Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <footer>
+        <div class="twelve columns copyright">
+            <p>&copy;2016 CNJ - All rights reserved.</p>
+        </div>
+    </footer>
+
         <?php if(!empty($errors)): ?>
             <div class="panel">
                 <ul><li><?php echo implode('</li><li>', $errors); ?></li></ul>
                 <?php endif; ?>
             </div>
-        <div class="row">
-            </div>
-    </div>
-    
-<!-- Footer
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <footer class="copyright">
-        <div class="twelve column">
-            <p>&copy;2015 CNJ - All rights reserved.</p>
-        </div>
-</footer>
-    
+
+</div>
 <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+    </body>
 </html>
 
 <?php
