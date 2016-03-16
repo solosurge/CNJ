@@ -15,7 +15,6 @@ $(document).ready(function() {
     });
 });
 
-
 /*________________PHP load dynamic page______________
 
     function swapContent(cv){
